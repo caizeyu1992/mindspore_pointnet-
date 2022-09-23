@@ -1,5 +1,5 @@
 # PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space (NIPS 2017)
-This work is based on Mindspore Frameworks.
+This work is based on Mindspore Frameworks.(https://www.mindspore.cn/)
 
 Original code is created by <a href="http://charlesrqi.com" target="_blank">Charles R. Qi</a>, <a href="http://stanford.edu/~ericyi">Li (Eric) Yi</a>, <a href="http://ai.stanford.edu/~haosu/" target="_blank">Hao Su</a>, <a href="http://geometry.stanford.edu/member/guibas/" target="_blank">Leonidas J. Guibas</a> from Stanford University. [[PDF](https://arxiv.org/abs/1706.02413)]
 
@@ -177,4 +177,5 @@ If you find the code helpful in your resarch or work, please cite the following 
 
 ## Acknowledgement
 We thank the authors of [pointnet++](https://github.com/charlesq34/pointnet2) for sharing their codes and data.
+    
 We thank the authors of [Pointnet2.ScanNet](https://github.com/daveredrum/Pointnet2.ScanNet) for sharing their codes and data.
