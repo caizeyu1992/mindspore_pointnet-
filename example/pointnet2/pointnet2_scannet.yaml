@@ -1,0 +1,78 @@
+#Builtin Configurations(DO NOT CHANGE THIS CONFIGURATIONS unless you know exactly what you are doing)
+
+# general settings
+device_target: GPU  # or choose Ascend
+run_distribute: False
+model: Pointnet2segModel  # or Pointnet2segModelMSG
+tag: pointnet2_scannet  # tag for the training, e.g. cuda_wl
+root: ./ScanNetOutput
+epoch: 250
+batch: 16
+
+
+# dataset and data loader settings
+datasets:
+  train:
+    data_path: /home/czy/HuaWei/Pointnet2.ScanNet
+    use_no_weighting: False
+    use_color: False
+    use_normal: False
+    num_classes: 20
+
+  val:
+    #data_path: ./ms3d/dataset/ScanNet
+    data_path: /home/czy/HuaWei/Pointnet2.ScanNet
+    use_no_weighting: False
+    use_color: False
+    use_normal: False
+    num_classes: 20
+
+
+# training settings
+train:
+  decay_epoch: 250
+
+  # load pretrained model
+  pretrained_ckpt: None
+
+  # optimizer
+  lr_decay_mode: cosine_decay_lr
+  min_lr: 0.000001
+  max_lr: 0.0001
+
+  milestone: None
+  learning_rates: None
+  momentum: 0.9
+
+  # checkpoint
+  ckpt_save_dir: ./pointnet2_cls/
+
+
+# eval settings
+val:
+  pretrained_ckpt: /home/czy/HuaWei/final/ms3d/example/pointnet2/Scannet_msg_nocolor_nonormal_miou_40_0.ckpt
+
+
+# Classes names
+NYUCLASSES: [
+    'floor',
+    'wall',
+    'cabinet',
+    'bed',
+    'chair',
+    'sofa',
+    'table',
+    'door',
+    'window',
+    'bookshelf',
+    'picture',
+    'counter',
+    'desk',
+    'curtain',
+    'refrigerator',
+    'bathtub',
+    'shower curtain',
+    'toilet',
+    'sink',
+    'otherprop'
+]

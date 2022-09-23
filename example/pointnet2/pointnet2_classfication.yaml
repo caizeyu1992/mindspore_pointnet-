@@ -1,0 +1,48 @@
+#Builtin Configurations(DO NOT CHANGE THIS CONFIGURATIONS unless you know exactly what you are doing)
+
+# general settings
+device_target: GPU  # or choose Ascend
+run_distribute: False
+model: Pointnet2clsModel  # or Pointnet2clsModelMSG
+
+# dataset and data loader settings
+datasets:
+  train:
+    #data_path: ./ms3d/dataset/modelnet40
+    data_path: /home/czy/NET/dataset/3Dpoints/modelnet40
+    resize: 1024
+    use_norm: False  # or True
+    batch_size: 16
+
+  val:
+    data_path: /home/czy/NET/dataset/3Dpoints/modelnet40
+    resize: 1024
+    use_norm: False  # or True
+    batch_size: 16
+
+
+# training settings
+train:
+  epoch_size: 250
+  decay_epoch: 250
+  milestone: None
+  learning_rates: None
+  momentum: 0.9
+  dataset_sink_mode: False
+
+  # load pretrained model
+  pretrained_ckpt: None
+
+  # optimizer
+  lr_decay_mode: cosine_decay_lr
+  min_lr: 0.000001
+  max_lr: 0.0001
+
+  # checkpoint
+  keep_checkpoint_max: 10
+  ckpt_save_dir: ./pointnet2_cls/
+
+
+#valing settings
+val:
+  pretrained_ckpt: /home/czy/HuaWei/ms3d/example/pointnet2/91_8.ckpt
