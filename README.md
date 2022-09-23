@@ -141,6 +141,7 @@ python pointnet2_scannet_eval.py --opt pointnet2_scannet.yaml
 ### Classfication_Modelnet40
 
 |     Model     |   npoints  | use_norm | Methods  | Accuracy |
+| :-----------: | :--------: | :------: | :------: | :------: |
 |   PointNet++  |   1024     |  FALSE   |   SSG    |  0.918   |[Baidu Drive](https://pan.baidu.com/s/1OxY7wxQS8oyQoJ-AvUr5Ag?pwd=hmxh).
 |   PointNet++  |   1024     |  TRUE    |   SSG    |  TODO    |
 |   PointNet++  |   1024     |  FALSE   |   MSG    |  TODO    |
@@ -151,6 +152,7 @@ python pointnet2_scannet_eval.py --opt pointnet2_scannet.yaml
 ### segmengation_scannetv2
 
 |   Model       |       use XYZ     |   use color       |   use normal      | use multiview     |   use MSG         |   mIoU    |
+| :-----------: | :---------------: | :---------------: | :---------------: | :---------------: | :---------------: | :-------: |
 |   PointNet++  |:heavy_check_mark: |  -                |  -                |  -                | -                 |   34.0    |[Baidu Drive](https://pan.baidu.com/s/18dy-XM6_-2BiZCjJhM4NSQ?pwd=x3bm).
 |   PointNet++  |:heavy_check_mark: |:heavy_check_mark: |:heavy_check_mark: |  -                | -                 |   TODO    |
 |   PointNet++  |:heavy_check_mark: |  -                |  -                |  -                |:heavy_check_mark: |   40.0    |[Baidu Drive](https://pan.baidu.com/s/1s02-jWFpx8sQamqun3CUdw?pwd=2t94).
